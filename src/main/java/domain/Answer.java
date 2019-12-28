@@ -36,9 +36,9 @@ public class Answer {
     public int getBallCount(String secretNumber) {
         int ballCount = 0;
         for (int i = 0; i < answer.length(); i++) {
-            String answerCharacter = Character.toString(answer.charAt(i));
+            char answerCharacter = answer.charAt(i);
             for (int j = 0; j < secretNumber.length(); j++) {
-                if (i != j && secretNumber.contains(answerCharacter)) {
+                if (i != j && secretNumber.charAt(j) == answerCharacter) {
                     ballCount++;
                 }
             }
